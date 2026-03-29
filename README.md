@@ -25,6 +25,7 @@ Training was done on 60,000 images over 5 epochs, allowing the model to graduall
 
 ---
 
+
 ## Libraries Used
 
 - Python
@@ -47,6 +48,25 @@ Training was done on 60,000 images over 5 epochs, allowing the model to graduall
 **Final Test Accuracy: 97.56%** (measured on unseen test data)
 
 ---
+
+## Model Details
+
+- Loss Function: Categorical Crossentropy  
+- Optimizer: Adam  
+- Batch Size: 32  
+- Epochs: 5  
+
+## Model Architecture
+
+| Layer | Details | Purpose |
+|-------|---------|---------|
+| Flatten | 28×28 → 784 neurons | Converts 2D image to 1D row |
+| Dense (Hidden) | 128 neurons, ReLU | Learns patterns in the data |
+| Dense (Output) | 10 neurons, Softmax | Outputs probability per digit |
+
+**ReLU** ignores negative values and keeps positive ones — helps learn complex patterns.
+
+**Softmax** converts output scores to probabilities that add to 100% — highest confidence = prediction.
 
 ## Visualisation
 
